@@ -5,10 +5,12 @@ import Major from './pages/major.jsx'
 import Events from './pages/events.jsx'
 import Nav from './componets/nav.jsx'
 import NotFound from './pages/notFound.jsx'
+import Creator from './componets/creator.jsx'
 function App() {
     return (
         <Router>
             <div className="App">
+                <Creator />
                 <Nav />
                 <Routes>
                     <Route exact path="" element={<Home />}></Route>
