@@ -70,6 +70,16 @@ export default class Nav extends React.Component {
                                         index
                                     ].offsetWidth + 'px'
                             })
+                            window.addEventListener('load', () => {
+                                topLamp.style.left =
+                                    document.querySelector('.nav').children[
+                                        index
+                                    ].offsetLeft + 'px'
+                                topLamp.style.width =
+                                    document.querySelector('.nav').children[
+                                        index
+                                    ].offsetWidth + 'px'
+                            })
                         } else {
                             document.querySelector('.nav').children[
                                 index
@@ -85,7 +95,7 @@ export default class Nav extends React.Component {
     }
     handleClick(e) {
         for (const i in e.target.parentElement.children) {
-            if (i > 0 && i <= 4) {
+            if (i > 0 && i <= 5) {
                 e.target.parentElement.children.item(i).style.color = 'inherit'
                 e.target.parentElement.children.item(i).style.textShadow =
                     'none'
@@ -104,7 +114,7 @@ export default class Nav extends React.Component {
     }
     render() {
         return (
-            <div className="nav">
+            <nav className="nav">
                 <div className="logo">
                     <img src={logo} alt="logo smkn 6 tangsel" />
                     <div className="text">
@@ -138,7 +148,7 @@ export default class Nav extends React.Component {
                     Acara
                 </Link>
                 <div className="topLampIndicator"></div>
-            </div>
+            </nav>
         )
     }
 }

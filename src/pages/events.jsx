@@ -5,7 +5,7 @@ export default class Events extends React.Component {
     }
     render() {
         return (
-            <div className="eventsPage">
+            <div className="eventsPage pages">
                 <h1>This is Events page</h1>
             </div>
         )
